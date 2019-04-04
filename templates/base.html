@@ -1,0 +1,103 @@
+{% load staticfiles %}
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Wolf prey digital</title>
+    
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hello...</title>
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" > 
+ 
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ 
+    </style>
+</head>
+
+<body>
+    <div class="containermain">
+        
+  <div id="nav">
+        
+        <section class="logosection">  
+ <nav class="navbar" id="nav">
+	
+<a href="{% url 'index' %}"><img class="logo" src="/static/img/wolflogo1.png"></a>
+</section>
+
+<header id="navc">
+<ul class="navbar" >
+  <li class= "navbarcontent"><span><a href="{% url 'issues' %}" class="navlink">Issues</span></li>
+  <li class= "navbarcontent"><span><a href="{% url 'features' %}" class="navlink">Features</a></span></li>
+  <li class= "navbarcontent"><span><a href="{% url 'pricing' %}" class="navlink">Pricing</a></span></li>
+  <li class= "navbarcontent"><span><a href="{% url 'signin' %}" class="navlink">Signup/Login</a></span></li>
+  <li class= "navbarcontent"><span><a href="{% url 'blog' %}" class="navlink">Blog</a></span></li>
+   <li class= "navbarcontent"><span><a href="{% url 'cart' %}" class="navlink">Cart</a></span></li>
+</ul>
+
+
+</nav>
+</header>
+ </div>       
+       
+     {% block maincontent %}
+     {% endblock maincontent %}
+     
+     
+     
+    <!-- Footer -->
+  <footer class="footer bg-light" id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto" style="padding: 50px">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <span><a href="{% url 'signin' %}">Login/Signup</a></span>
+            </li>
+            <li class="list-inline-item"></li>
+            <li class="list-inline-item">
+              <span><a href="{% url 'features' %}">Features</a></span>
+            </li>
+            <li class="list-inline-item"></li>
+            <li class="list-inline-item">
+              <span><a href="{% url 'issues' %}">Issues</a></span>
+            </li>
+           
+          </ul>
+          
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-facebook fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-instagram fa-2x fa-fw"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+    
+        
+    
+    
