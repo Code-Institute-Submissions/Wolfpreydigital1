@@ -1,0 +1,62 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+
+
+
+
+
+{% block maincontent %}
+
+
+
+<br><br>
+
+<h2>How we price our features</h2>
+<p>In order to give you a quote on the price of features we offer, we first have to diagnose the problem you have, find a solution and then assess the time and labor which has to go into solving your problem</p>
+
+<div class="container">
+  <form action="/action_page.php">
+    <div class="rowprice">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="rowprice">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+    <div class="rowprice">
+      <div class="col-25">
+        <label for="country">What kind of problem?</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">Bugs</option>
+          <option value="canada">Features</option>
+          <option value="usa">Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="rowprice">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="rowprice">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+
+{% endblock %}
